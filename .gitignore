@@ -1,0 +1,46 @@
+## Unity generated folders/files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+
+## Auto-generated VS/MD/JetBrains files
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+## Unity3D generated meta files for text serialization cache
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+## Crash reports
+sysinfo.txt
+
+## Unity package manager
+Packages/packages-lock.json
+
+## Rider
+.idea/
+
+## Visual Studio Code
+.vscode/
+
+## OS files
+.DS_Store
+Thumbs.db
