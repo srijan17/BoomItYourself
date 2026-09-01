@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 8421761231882367274}
   - component: {fileID: 1108832192336110839}
   - component: {fileID: 2990239434984703748}
+  - component: {fileID: 3025643687152083884}
   m_Layer: 0
   m_Name: test
   m_TagString: Untagged
@@ -258,6 +259,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeroTarget
   heroRunner: {fileID: 0}
+--- !u!114 &3025643687152083884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588514431543816627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a81e09999956c47954a5768cc96b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeroRunner2
+  startingJunction: {fileID: 0}
+  nextJunction:
+    nextJunction: {fileID: 0}
+    time: 0
+    isActive: 0
+  currentJunction: {fileID: 0}
+  routeManager: {fileID: 0}
+  isRunning: 0
+  timeElapsedInSegment: 0
 --- !u!1 &727625493270636942
 GameObject:
   m_ObjectHideFlags: 0

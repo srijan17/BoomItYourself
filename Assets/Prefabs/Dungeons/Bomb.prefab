@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BombTarget
   bomb: {fileID: 6329925317569404497}
-  explosionEffect: {fileID: 0}
+  explosionEffect: {fileID: 5071785231648576298}
 --- !u!1 &1618234811033517753
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boom
       objectReference: {fileID: 0}
+    - target: {fileID: 5499991414277970958, guid: 5b05261a5db46cd4e9eab34367582021, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5998094682147014917, guid: 5b05261a5db46cd4e9eab34367582021, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.34213
@@ -385,6 +389,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b05261a5db46cd4e9eab34367582021, type: 3}
+--- !u!1 &5071785231648576298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5499991414277970958, guid: 5b05261a5db46cd4e9eab34367582021, type: 3}
+  m_PrefabInstance: {fileID: 734505407954865956}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6416784577738081825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5998094682147014917, guid: 5b05261a5db46cd4e9eab34367582021, type: 3}

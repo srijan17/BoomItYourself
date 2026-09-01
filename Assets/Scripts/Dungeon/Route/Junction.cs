@@ -4,6 +4,7 @@ using System.Linq;
 
 [System.Serializable]
 public class JunctionConnection{
+    public string JunctionName;
     public Junction nextJunction;
     public float time;
     public bool isActive;

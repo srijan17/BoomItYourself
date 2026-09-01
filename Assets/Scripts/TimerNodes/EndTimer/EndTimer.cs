@@ -11,7 +11,7 @@ public class EndTimer : ITimerNode
        completed();
     }
 
- 
+    public ITarget Target { get => target; set => target = value; }
   public override void PauseTimer()
     {
     }

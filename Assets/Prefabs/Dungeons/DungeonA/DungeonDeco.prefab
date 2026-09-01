@@ -3120,6 +3120,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5001319874398496197}
+  - component: {fileID: -6107741560609614742}
+  - component: {fileID: 9165719262837797173}
   m_Layer: 8
   m_Name: DungeonDeco
   m_TagString: Untagged
@@ -3158,8 +3160,51 @@ Transform:
   - {fileID: 2497627124441390975}
   - {fileID: 1590269865168980518}
   - {fileID: 4731887808391221534}
+  - {fileID: 3956229397804199150}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &-6107741560609614742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7939445760413218588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c86d4c5dde8df84cbcfcb328b0bf466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RouteManager
+  HoverPrefab: {fileID: 7979962195495142424, guid: 70efcf6f4935b0f40b199ec6623f80b7, type: 3}
+  HoverPrefabParent: {fileID: 0}
+  hoverPrefabOffset: {x: 0, y: -4, z: 0}
+  lineOffset: {x: 0, y: 0.68, z: 0}
+  lineWidth: 0.3
+  lineRendererPrefab: {fileID: 9096733769127064738, guid: 992613910c63eee458be0c1ac94ccd9b, type: 3}
+  startingJunction: {fileID: 606970289559362088}
+  routeDurationsText: {fileID: 0}
+  MappingRouteRoot: {fileID: 0}
+  routeColors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
+  - {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  - {r: 0, g: 1, b: 1, a: 1}
+  - {r: 1, g: 0, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+--- !u!114 &9165719262837797173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7939445760413218588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d60047d6eb4c845b4eb452bb6e7c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonRoot
 --- !u!1 &8107785987563631693
 GameObject:
   m_ObjectHideFlags: 0
@@ -4794,6 +4839,99 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1454973537975645834, guid: a7b828994731ee944b7199db374c7ebd, type: 3}
   m_PrefabInstance: {fileID: 5430475014949118018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5627866823302809060
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5001319874398496197}
+    m_Modifications:
+    - target: {fileID: 1741430466605953144, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: nextJunctions.Array.data[0].JunctionName
+      value: B
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077149216282164245, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: m_Name
+      value: Route
+      objectReference: {fileID: 0}
+    - target: {fileID: 2101456648451587658, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: nextJunctions.Array.data[0].JunctionName
+      value: C
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077341622095405004, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: nextJunctions.Array.data[0].JunctionName
+      value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077466890796482861, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: nextJunctions.Array.data[0].JunctionName
+      value: E
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726729593855075682, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: nextJunctions.Array.data[0].JunctionName
+      value: D
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718241706202900746, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718241706202900746, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718241706202900746, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718241706202900746, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718241706202900746, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718241706202900746, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718241706202900746, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718241706202900746, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718241706202900746, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718241706202900746, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+--- !u!114 &606970289559362088 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5077341622095405004, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+  m_PrefabInstance: {fileID: 5627866823302809060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c630b0e123fcbb94e8aadf9b3b6eea98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Junction
+--- !u!4 &3956229397804199150 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8718241706202900746, guid: ba6c795b93bce9148a707ae4c041dced, type: 3}
+  m_PrefabInstance: {fileID: 5627866823302809060}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6097882454725548669
 PrefabInstance:

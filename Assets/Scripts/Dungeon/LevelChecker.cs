@@ -13,6 +13,7 @@ public class LevelChecker : MonoBehaviour
 
     public void OnSimulationEvent(SimulationEvent simEvent)
     {
+        //Special Events for Level completion for player kill, player escap , coffee ready etc 
         // Check if the event is relevant to the level completion
         if (simEvent.EventType == SimulationEventType.Explode)
         {
