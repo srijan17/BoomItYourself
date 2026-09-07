@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 3025643687152083884}
   m_Layer: 0
   m_Name: test
-  m_TagString: Untagged
+  m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,6 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HeroRunner2
   startingJunction: {fileID: 0}
   nextJunction:
+    JunctionName: 
     nextJunction: {fileID: 0}
     time: 0
     isActive: 0

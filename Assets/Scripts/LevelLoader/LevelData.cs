@@ -1,12 +1,18 @@
 using UnityEngine;
 using System.Collections.Generic;
-
 [System.Serializable]
-public class NodeDefinition
+public class LevelTimerNode
 {
-    public ITimerNode timerNode;
-    public string nodeName;
-    public float nodeDuration;
+    public TimerNodeDefinition timer;
+    public string timerName;
+    public float maxDuration;
+}
+
+[CreateAssetMenu(menuName = "BIY/Timer Node Definition")]
+public class TimerNodeDefinition : ScriptableObject
+{
+    public GameObject timerNode;
+    public string timerID;
 }
 
 
@@ -21,5 +27,5 @@ public class LevelData : ScriptableObject
     public GameObject[] heroPrefabs;
     public List<float> routeTimes; // List of times for each route in the level
     public float targetTime;
-
+    public List<LevelTimerNode> timerNodes;
 }

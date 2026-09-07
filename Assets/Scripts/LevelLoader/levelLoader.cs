@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+
+
 public class LevelLoader : MonoBehaviour
 {   public int currentLevelIndex=-1;
     public List<LevelData> levels; // List of levels to load
@@ -13,6 +15,16 @@ public class LevelLoader : MonoBehaviour
     public LevelData currLevelData;
     public GameObject bombPrefab; // Reference to the bomb prefab
 
+    public GameObject timerRoot; // Parent object to hold the loaded timer nodes
+
+    [SerializeField] public List<Transform> TimerNodeSpawnPoints;
+
+    //parent for timer loading
+    // level data needs all timer nodes
+    // generate timer nodes based on the level data
+    // reset handles that 
+    
+
     //TEMPORARY  WILL ADD END NODE INSTANTIATE AND GAME NODE ISNTANTE
     public EndTimer endTimer;
     public void ResetAndLoadHero()
@@ -22,8 +34,38 @@ public class LevelLoader : MonoBehaviour
         {
             ResetHero(currLevelData, dungeonRoot);
         }
-
+        InstantiateTimerNodes();
         InstantiateBomb(currLevelData.bombNode, dungeonRoot);
+    }
+
+    public void InstantiateTimerNodes(){
+                DungeonRoot dungeonRoot = levelParent.GetComponentInChildren<DungeonRoot>();
+                //Clear existing timer nodes
+        ITimerNode[] existingTimerNodes = timerRoot.GetComponentsInChildren<ITimerNode>();
+        if (existingTimerNodes != null)
+        {
+            foreach (ITimerNode timerNode in existingTimerNodes)
+            {
+                Destroy(timerNode.gameObject);
+            }
+        }
+        if(currLevelData != null && dungeonRoot != null)
+        {
+            for(int i = 0; i < currLevelData.timerNodes.Count; i++)
+            {
+                LevelTimerNode timerNodeData = currLevelData.timerNodes[i];
+                if(timerNodeData.timer != null && TimerNodeSpawnPoints.Count > i)
+                {
+                    Transform spawnPoint = TimerNodeSpawnPoints[i];
+                    GameObject timerNodeInstance = Instantiate(timerNodeData.timer.timerNode, spawnPoint.position, Quaternion.identity);
+                    timerNodeInstance.name = timerNodeData.timerName;
+                    ITimerNode timerNodeComponent = timerNodeInstance.GetComponent<ITimerNode>();
+                    timerNodeComponent.maxDuration=timerNodeData.maxDuration;
+                    timerNodeInstance.transform.SetParent(timerRoot.transform);
+                }
+            }
+        }
+
     }
     private void ResetHero(LevelData levelData, DungeonRoot dungeonRoot)
     {
@@ -107,6 +149,7 @@ public class LevelLoader : MonoBehaviour
         }
        ResetHero(levelData, dungeonRoot);
         InstantiateBomb(levelData.bombNode, dungeonRoot);
+        InstantiateTimerNodes();
         // dungeonRoot.Routes[0];
             
         // Load the route prefab

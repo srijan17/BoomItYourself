@@ -3,6 +3,7 @@ using UnityEngine;
 public class HeroTarget : ITarget
 {
     public override string targetName { get; set; }
+    public bool isDead = false;
 
     public HeroRunner2 heroRunner; // Reference to the HeroRunner script
 
@@ -37,5 +38,26 @@ public class HeroTarget : ITarget
             heroRunner.Reset(); // Hide the hero runner object
         }
         // Implement the behavior to reset the target
+    }
+
+    public void KillHero()
+    {
+        if(isDead)
+            return;
+        isDead = true;
+        if(heroRunner!=null){
+         SimulationManager.Instance.AddSimulationEvent(heroRunner.gameObject.name, SimulationEventType.HeroDied, SimulationManager.Instance.simulationElapsedTime);
+
+        }
+    }
+
+    public void Escape()
+    {
+        if(isDead)
+            return;
+        if(heroRunner!=null){
+         SimulationManager.Instance.AddSimulationEvent(heroRunner.gameObject.name, SimulationEventType.HeroEscaped, SimulationManager.Instance.simulationElapsedTime);
+
+        }
     }
 }

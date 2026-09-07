@@ -5,6 +5,8 @@ public class LevelChecker : MonoBehaviour
     public GameObject BombTarget;
     public GameObject Hero;
 
+    public SimpleStartMenu simpleStartMenu;
+
     public SimulationManager simulationManager;
     public void Awake(){
         simulationManager.onNewEvent.AddListener(OnSimulationEvent);
@@ -15,33 +17,37 @@ public class LevelChecker : MonoBehaviour
     {
         //Special Events for Level completion for player kill, player escap , coffee ready etc 
         // Check if the event is relevant to the level completion
-        if (simEvent.EventType == SimulationEventType.Explode)
+        if (simEvent.EventType == SimulationEventType.HeroDied || simEvent.EventType == SimulationEventType.HeroEscaped)
         {
             // Implement your logic to check if all necessary events have occurred
             // For example, you can check if all required targets have been triggered
-            CheckLevelCompletion();
+            CheckLevelCompletion(simEvent);
+            simpleStartMenu.ShowMenu(simEvent.EventType == SimulationEventType.HeroDied);
         }
+
+        
         
     }
-    public void CheckLevelCompletion()
+    public void CheckLevelCompletion(SimulationEvent simEvent)
     {
-
         Debug.Log("Checking level completion...");
-        Debug.Log($"BombTarget: {BombTarget.transform.position}, Hero: {Hero.transform.position}");
+        Debug.Log($"Simulation Event: {simEvent.EventType}, Target: {simEvent.TargetName}");
+        // Debug.Log("Checking level completion...");
+        // Debug.Log($"BombTarget: {BombTarget.transform.position}, Hero: {Hero.transform.position}");
 
-        Debug.Log($"Simulation Elapsed Time: {simulationManager.simulationElapsedTime}");
-        // Implement your level completion logic here
-        //Check Hero Distance and elapsed Time and target time 
-        if(BombTarget!=null && Hero!=null){
-            float distance = Vector3.Distance(BombTarget.transform.position, Hero.transform.position);
-            if(distance<1f && simulationManager.simulationElapsedTime >= simulationManager.TargetTime){
-                Debug.Log("Level completed!");
-            }
-        }
-        else{
-            Debug.LogWarning("BombTarget or Hero is not assigned in LevelChecker.");
-        }
-        // Debug.Log("Level completed!");
+        // Debug.Log($"Simulation Elapsed Time: {simulationManager.simulationElapsedTime}");
+        // // Implement your level completion logic here
+        // //Check Hero Distance and elapsed Time and target time 
+        // if(BombTarget!=null && Hero!=null){
+        //     float distance = Vector3.Distance(BombTarget.transform.position, Hero.transform.position);
+        //     if(distance<1f && simulationManager.simulationElapsedTime >= simulationManager.TargetTime){
+        //         Debug.Log("Level completed!");
+        //     }
+        // }
+        // else{
+        //     Debug.LogWarning("BombTarget or Hero is not assigned in LevelChecker.");
+        // }
+        // // Debug.Log("Level completed!");
 
 
     }

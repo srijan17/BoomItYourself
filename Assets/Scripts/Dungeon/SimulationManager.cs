@@ -10,6 +10,8 @@ public enum SimulationEventType{
     Toggle,
     TurnOn,
     TurnOff,
+    HeroDied,
+    HeroEscaped
 }
 
 public struct SimulationEvent{
@@ -71,6 +73,12 @@ public class SimulationManager : MonoBehaviour
         
         if(eventType==SimulationEventType.StartSimulation){
             isSimulationRunning = true;
+        }
+        if(eventType==SimulationEventType.HeroDied){
+            isSimulationRunning = false;
+        }
+        if(eventType==SimulationEventType.HeroEscaped){
+            isSimulationRunning = false;
         }
     }
 
