@@ -16,8 +16,10 @@ public class LevelLoader : MonoBehaviour
     public GameObject bombPrefab; // Reference to the bomb prefab
 
     public GameObject timerRoot; // Parent object to hold the loaded timer nodes
+    public GameObject endTimerRoot; // Parent object to hold the loaded end timer nodes
 
     [SerializeField] public List<Transform> TimerNodeSpawnPoints;
+    [SerializeField] public List<Transform> EndTimerNodeSpawnPoints;
 
     //parent for timer loading
     // level data needs all timer nodes
@@ -36,6 +38,44 @@ public class LevelLoader : MonoBehaviour
         }
         InstantiateTimerNodes();
         InstantiateBomb(currLevelData.bombNode, dungeonRoot);
+        InstantiateOutput();
+    }
+
+    public void InstantiateOutput(){
+         DungeonRoot dungeonRoot = levelParent.GetComponentInChildren<DungeonRoot>();
+        //Clear existing end nodes
+        EndTimer[] existingendTimerNodes = endTimerRoot.GetComponentsInChildren<EndTimer>();
+
+        List<ITarget> targets = new List<ITarget>(levelParent.gameObject.GetComponentsInChildren<ITarget>());
+
+        if (existingendTimerNodes != null)
+        {
+            foreach (EndTimer timerNode in existingendTimerNodes)
+            {
+                Destroy(timerNode.gameObject);
+            }
+        }
+        if(currLevelData != null && dungeonRoot != null)
+        {
+            for(int i = 0; i < currLevelData.outputSignals.Count; i++)
+            {
+                LevelOutputSignal endTimerNodeData = currLevelData.outputSignals[i];
+              
+                    Transform spawnPoint = EndTimerNodeSpawnPoints[i];
+                    GameObject endTimerInstance = Instantiate(endTimerNodeData.outputPrefab,  spawnPoint.position, Quaternion.identity);
+                    endTimerInstance.transform.SetParent(endTimerRoot.transform);
+
+                    EndTimer endTimerComponent = endTimerInstance.GetComponent<EndTimer>();
+
+                    //Find relevant target for the end timer node
+                    ITarget target = targets.Find(t => t.gameObject.name == endTimerNodeData.targetName);
+                    if(target != null)
+                    {
+                        endTimerComponent.Target=target;
+                    endTimerComponent.eventType = endTimerNodeData.outputType;
+                    }
+            }
+        }
     }
 
     public void InstantiateTimerNodes(){
@@ -150,6 +190,7 @@ public class LevelLoader : MonoBehaviour
        ResetHero(levelData, dungeonRoot);
         InstantiateBomb(levelData.bombNode, dungeonRoot);
         InstantiateTimerNodes();
+        InstantiateOutput();
         // dungeonRoot.Routes[0];
             
         // Load the route prefab

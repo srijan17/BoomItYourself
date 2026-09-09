@@ -4,13 +4,13 @@ using UnityEngine.Events;
 public class EndTimer : ITimerNode
 {
 
-   [SerializeField] private SimulationEventType eventType;
+   [SerializeField] public SimulationEventType eventType;
    [SerializeField] private ITarget target;
     public override void StartTimer()
     {
        completed();
     }
-
+    
     public ITarget Target { get => target; set => target = value; }
   public override void PauseTimer()
     {

@@ -30,3 +30,7 @@ MonoBehaviour:
   - timer: {fileID: 11400000, guid: 3b6f6c0d813c1594d8b1bf7616fcb1f9, type: 2}
     timerName: Candle
     maxDuration: 2
+  outputSignals:
+  - outputPrefab: {fileID: 3088903001619148820, guid: 68938b39410fb1a47823047307483470, type: 3}
+    outputType: 1
+    targetName: Bomb
