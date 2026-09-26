@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WireNode
   canStartWire: 1
-  canReceiveWire: 1
+  canReceiveWire: 0
   highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   wireAnchor: {fileID: 6730125305784705885}

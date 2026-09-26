@@ -1,0 +1,30 @@
+# Low-poly boiler materials
+newmtl blue
+Kd 0.34 0.46 0.54
+Ka 0.05 0.05 0.05
+Ks 0.10 0.10 0.10
+Ns 20
+
+newmtl dark
+Kd 0.13 0.18 0.21
+Ka 0.03 0.03 0.03
+Ks 0.12 0.12 0.12
+Ns 25
+
+newmtl copper
+Kd 0.55 0.28 0.14
+Ka 0.04 0.02 0.01
+Ks 0.18 0.10 0.06
+Ns 20
+
+newmtl red
+Kd 0.65 0.16 0.10
+Ka 0.04 0.01 0.01
+Ks 0.12 0.05 0.03
+Ns 18
+
+newmtl cream
+Kd 0.84 0.78 0.62
+Ka 0.05 0.05 0.04
+Ks 0.05 0.05 0.05
+Ns 8
