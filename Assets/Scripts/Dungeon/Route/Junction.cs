@@ -22,4 +22,13 @@ public class Junction : MonoBehaviour
     public List<JunctionConnection> GetNextJunctions(){
         return nextJunctions;
     }
+
+    public void ToggleRoute(Junction targetJunction, bool isActive)
+    {
+        var connection = nextJunctions.FirstOrDefault(c => c.nextJunction.gameObject.name == targetJunction.gameObject.name);
+        if (connection != null)
+        {
+            connection.isActive = isActive;
+        }
+    }
 }

@@ -1929,6 +1929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleTimer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3088903001619148820, guid: 5c3401836096f514d8aa1ec56a5a2242, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3715197502890079685, guid: 5c3401836096f514d8aa1ec56a5a2242, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1996,10 +2000,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2645414153302871725, guid: 5c3401836096f514d8aa1ec56a5a2242, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c3401836096f514d8aa1ec56a5a2242, type: 3}
 --- !u!1001 &290977036
 PrefabInstance:
@@ -3667,6 +3668,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c630b0e123fcbb94e8aadf9b3b6eea98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Junction
+--- !u!1 &539931987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 539931988}
+  m_Layer: 0
+  m_Name: spawn1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &539931988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539931987}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.32, y: 0.31, z: -0.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2016824466}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &597024301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3690,6 +3722,10 @@ PrefabInstance:
     - target: {fileID: 3088903001619148820, guid: ea7558c00ed72a945a46eeb692a3fa20, type: 3}
       propertyPath: m_Name
       value: GateTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3088903001619148820, guid: ea7558c00ed72a945a46eeb692a3fa20, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3715197502890079685, guid: ea7558c00ed72a945a46eeb692a3fa20, type: 3}
       propertyPath: m_Mesh
@@ -3758,10 +3794,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2645414153302871725, guid: ea7558c00ed72a945a46eeb692a3fa20, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea7558c00ed72a945a46eeb692a3fa20, type: 3}
 --- !u!1001 &606867851
 PrefabInstance:
@@ -6337,6 +6370,7 @@ MonoBehaviour:
   levels:
   - {fileID: 11400000, guid: 7b976b33589a2b544833ad57c059fb9c, type: 2}
   - {fileID: 11400000, guid: 2556352c4db219448a8f01fd21d692a4, type: 2}
+  - {fileID: 11400000, guid: 25f467a4c091dc24796fea57704859e2, type: 2}
   simulationManager: {fileID: 973640875}
   routeManager: {fileID: 973640877}
   levelParent: {fileID: 1183285839}
@@ -6355,6 +6389,7 @@ MonoBehaviour:
   EndTimerNodeSpawnPoints:
   - {fileID: 1171935654}
   - {fileID: 211327415}
+  - {fileID: 539931988}
   endTimer: {fileID: 797295776}
 --- !u!114 &973640879
 MonoBehaviour:
@@ -7813,6 +7848,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1213799631276819893, guid: e77350f26f57a8e47b52d9e2001cc92e, type: 3}
+      propertyPath: targetName
+      value: Bomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213799631276819893, guid: e77350f26f57a8e47b52d9e2001cc92e, type: 3}
       propertyPath: explosionEffect
       value: 
       objectReference: {fileID: 1307310859}
@@ -8553,6 +8592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiceCookerTimer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3088903001619148820, guid: 2191dfa4927989f40832f7c3460c6787, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3715197502890079685, guid: 2191dfa4927989f40832f7c3460c6787, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -8616,10 +8659,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2645414153302871725, guid: 2191dfa4927989f40832f7c3460c6787, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2191dfa4927989f40832f7c3460c6787, type: 3}
 --- !u!43 &1549754694
 Mesh:
@@ -11008,6 +11048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiceCookerTimer
       objectReference: {fileID: 0}
+    - target: {fileID: 3088903001619148820, guid: 2191dfa4927989f40832f7c3460c6787, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3715197502890079685, guid: 2191dfa4927989f40832f7c3460c6787, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11071,10 +11115,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2645414153302871725, guid: 2191dfa4927989f40832f7c3460c6787, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2191dfa4927989f40832f7c3460c6787, type: 3}
 --- !u!1001 &1923680784
 PrefabInstance:
@@ -11431,6 +11472,7 @@ Transform:
   m_Children:
   - {fileID: 1171935654}
   - {fileID: 211327415}
+  - {fileID: 539931988}
   m_Father: {fileID: 720838910}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2028472236

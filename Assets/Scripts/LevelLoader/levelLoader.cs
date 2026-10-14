@@ -38,6 +38,7 @@ public class LevelLoader : MonoBehaviour
         }
         InstantiateTimerNodes();
         InstantiateBomb(currLevelData.bombNode, dungeonRoot);
+        ResetTargets(currLevelData,dungeonRoot);
         InstantiateOutput();
     }
 
@@ -68,7 +69,7 @@ public class LevelLoader : MonoBehaviour
                     EndTimer endTimerComponent = endTimerInstance.GetComponent<EndTimer>();
 
                     //Find relevant target for the end timer node
-                    ITarget target = targets.Find(t => t.gameObject.name == endTimerNodeData.targetName);
+                    ITarget target = targets.Find(t => t.targetName == endTimerNodeData.targetName);
                     if(target != null)
                     {
                         endTimerComponent.Target=target;
@@ -158,6 +159,15 @@ public class LevelLoader : MonoBehaviour
         }
         else{
             Debug.LogError($"Junction with name {JunctionName} not found in the dungeon.");
+        }
+    }
+
+    public void ResetTargets(LevelData levelData, DungeonRoot dungeonRoot)
+    {
+        ITarget[] targets = dungeonRoot.gameObject.GetComponentsInChildren<ITarget>();
+        foreach (ITarget target in targets)
+        {
+            target.ResetTarget();
         }
     }
     public void LoadLevel(LevelData levelData)

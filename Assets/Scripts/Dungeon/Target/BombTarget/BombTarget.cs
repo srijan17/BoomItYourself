@@ -3,13 +3,12 @@ using UnityEngine;
 
 public class BombTarget : ITarget
 {
-    public override string targetName { get; set; }
-
     public GameObject bomb; 
 
     public GameObject explosionEffect; 
 
     public ExplosionCheck explosionRadiusCheck;
+
 
     public float explosionRadius; // The radius within which the explosion affects the hero
     private void Awake()

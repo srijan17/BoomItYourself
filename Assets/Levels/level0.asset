@@ -33,4 +33,4 @@ MonoBehaviour:
   outputSignals:
   - outputPrefab: {fileID: 3088903001619148820, guid: 68938b39410fb1a47823047307483470, type: 3}
     outputType: 1
-    targetName: Bomb
+    targetName: BombTarget

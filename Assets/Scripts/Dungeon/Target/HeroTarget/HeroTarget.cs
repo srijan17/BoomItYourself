@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class HeroTarget : ITarget
 {
-    public override string targetName { get; set; }
     public bool isDead = false;
 
     public HeroRunner2 heroRunner; // Reference to the HeroRunner script

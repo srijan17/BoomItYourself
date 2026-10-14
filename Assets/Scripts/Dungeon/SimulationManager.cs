@@ -6,6 +6,7 @@ public enum SimulationEventType{
     StartSimulation,
     Explode,
     DoorOpen,
+    DoorToggle,
     DoorClose,
     Toggle,
     TurnOn,
