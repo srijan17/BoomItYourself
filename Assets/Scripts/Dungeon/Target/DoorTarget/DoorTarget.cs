@@ -57,6 +57,7 @@ public class DoorTarget : ITarget
     {
        
         isDoorOpen = initialState; // Update the door's open/closed state based on the initial state
+        sourceJunction.ToggleRoute(targetJunction, initialState);
         if(doorOpen != null)
         {
             doorOpen.Toggle(isDoorOpen); // Animate the door to its reset state

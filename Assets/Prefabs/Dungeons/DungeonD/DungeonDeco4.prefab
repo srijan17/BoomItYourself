@@ -9315,7 +9315,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].time
@@ -9339,7 +9339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8111113925778276932, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.27
+      value: 32.92
       objectReference: {fileID: 0}
     - target: {fileID: 8111113925778276932, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: m_LocalPosition.y
