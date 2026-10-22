@@ -27,7 +27,7 @@ public class GateTimerRenderer : MonoBehaviour
 
 
     [Header("Timer Value")]
-    [SerializeField] private TMPro.TextMeshPro timerText;
+    [SerializeField] private TMPro.TMP_Text  timerText;
     private void Awake()
     {
         gateTimer = GetComponent<GateTimer>();

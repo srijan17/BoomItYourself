@@ -8,6 +8,8 @@ public class DoorTarget : ITarget
 
     public Junction targetJunction;
 
+    public string routeId; // The route ID associated with this door
+
     public bool initialState = false; // The initial state of the door (open or closed)
     public GameObject door; 
     public bool isDoorOpen = false; // Track the door's open/closed state
@@ -24,7 +26,7 @@ public class DoorTarget : ITarget
         {
             isDoorOpen = initialState;
             doorOpen.Toggle(isDoorOpen);
-            sourceJunction.ToggleRoute(targetJunction, isDoorOpen);
+            sourceJunction.ToggleRoute(routeId, isDoorOpen);
         }
     }
 
@@ -49,7 +51,7 @@ public class DoorTarget : ITarget
             }
             if (sourceJunction != null && targetJunction != null)
             {
-                sourceJunction.ToggleRoute(targetJunction, isDoorOpen);
+                sourceJunction.ToggleRoute(routeId, isDoorOpen);
             }
     }
 
@@ -57,7 +59,7 @@ public class DoorTarget : ITarget
     {
        
         isDoorOpen = initialState; // Update the door's open/closed state based on the initial state
-        sourceJunction.ToggleRoute(targetJunction, initialState);
+        sourceJunction.ToggleRoute(routeId, initialState);
         if(doorOpen != null)
         {
             doorOpen.Toggle(isDoorOpen); // Animate the door to its reset state

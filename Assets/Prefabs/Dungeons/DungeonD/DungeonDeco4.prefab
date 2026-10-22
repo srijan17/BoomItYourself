@@ -5409,12 +5409,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 5796424280523887695}
     m_Modifications:
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: JunctionName
+      value: F
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].time
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[0].routeId
+      value: F-G
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].isActive
@@ -5430,7 +5438,7 @@ PrefabInstance:
       objectReference: {fileID: 7105298372629090313}
     - target: {fileID: 5269409121768672573, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: m_Name
-      value: E1
+      value: F
       objectReference: {fileID: 0}
     - target: {fileID: 8111113925778276932, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5616,12 +5624,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 5796424280523887695}
     m_Modifications:
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: JunctionName
+      value: C
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].time
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[0].routeId
+      value: C-D
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].isActive
@@ -6074,12 +6090,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 5796424280523887695}
     m_Modifications:
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: JunctionName
+      value: D
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].time
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[0].routeId
+      value: D-D1
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].isActive
@@ -6281,12 +6305,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 5796424280523887695}
     m_Modifications:
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: JunctionName
+      value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].time
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[0].routeId
+      value: A-B
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].isActive
@@ -6363,6 +6395,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5796424280523887695}
     m_Modifications:
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: JunctionName
+      value: B
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -6373,6 +6409,14 @@ PrefabInstance:
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[1].time
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[0].routeId
+      value: B-C
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[1].routeId
+      value: B-B1
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].isActive
@@ -6400,7 +6444,7 @@ PrefabInstance:
       objectReference: {fileID: 5287328116192568086}
     - target: {fileID: 5269409121768672573, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: m_Name
-      value: B1
+      value: B
       objectReference: {fileID: 0}
     - target: {fileID: 8111113925778276932, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6929,6 +6973,7 @@ MonoBehaviour:
   targetName: Door1
   sourceJunction: {fileID: 1367313782286171636}
   targetJunction: {fileID: 3070859625916043007}
+  routeId: B-C
   initialState: 0
   door: {fileID: 3861395733588086945}
   isDoorOpen: 0
@@ -6947,12 +6992,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 5796424280523887695}
     m_Modifications:
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: JunctionName
+      value: E
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].time
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[0].routeId
+      value: E-F
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].isActive
@@ -8122,12 +8175,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 5796424280523887695}
     m_Modifications:
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: JunctionName
+      value: D1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].time
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[0].routeId
+      value: D1-D2
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].isActive
@@ -8305,12 +8366,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 5796424280523887695}
     m_Modifications:
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: JunctionName
+      value: G
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].time
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[0].routeId
+      value: G-H
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].isActive
@@ -8326,7 +8395,7 @@ PrefabInstance:
       objectReference: {fileID: 7363747236256382819}
     - target: {fileID: 5269409121768672573, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: m_Name
-      value: F
+      value: G
       objectReference: {fileID: 0}
     - target: {fileID: 8111113925778276932, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8397,6 +8466,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4681852347978673353}
     m_Modifications:
+    - target: {fileID: 1790799236052295842, guid: f8639e02bc3c3d344962089c275bc048, type: 3}
+      propertyPath: routeId
+      value: F-G
+      objectReference: {fileID: 0}
     - target: {fileID: 1790799236052295842, guid: f8639e02bc3c3d344962089c275bc048, type: 3}
       propertyPath: isDoorOpen
       value: 0
@@ -8571,7 +8644,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5269409121768672573, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: m_Name
-      value: G
+      value: H
       objectReference: {fileID: 0}
     - target: {fileID: 8111113925778276932, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9047,6 +9120,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5796424280523887695}
     m_Modifications:
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: JunctionName
+      value: B1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -9055,8 +9132,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[0].routeId
+      value: B1-E
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].isActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[0].routeType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].JunctionName
@@ -9068,7 +9153,7 @@ PrefabInstance:
       objectReference: {fileID: 168056288283270970}
     - target: {fileID: 5269409121768672573, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: m_Name
-      value: BB
+      value: B1
       objectReference: {fileID: 0}
     - target: {fileID: 8111113925778276932, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: m_LocalPosition.x

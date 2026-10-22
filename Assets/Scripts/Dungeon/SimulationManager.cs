@@ -30,7 +30,9 @@ public class SimulationManager : MonoBehaviour
     [SerializeField] private float targetTime = 5f;
 
     public float TargetTime => targetTime;
-    
+
+    //Temp to do : remove this 
+    public TMPro.TextMeshPro timerText;
     
     [SerializeField] private List<SimulationEvent> simulationEvents = new List<SimulationEvent>();
 
@@ -91,7 +93,9 @@ public class SimulationManager : MonoBehaviour
     public void Update(){
         if(isSimulationRunning){
             simulationElapsedTime += Time.deltaTime * simulationTimeScale;
-            
+            if(timerText != null){
+                timerText.text = simulationElapsedTime.ToString("F2");
+            }
         }
     }
 

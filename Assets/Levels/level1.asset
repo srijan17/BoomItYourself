@@ -20,13 +20,18 @@ MonoBehaviour:
   heroPrefabs:
   - {fileID: 732669788659935590, guid: 96cebd050b10dbe4f8ae63eca82fffea, type: 3}
   routeTimes:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
+  - time: 1
+    routeId: A-B
+  - time: 1
+    routeId: B-C
+  - time: 1
+    routeId: C-D
+  - time: 1
+    routeId: D-E
+  - time: 1
+    routeId: E-F
+  - time: 1
+    routeId: F-G
   targetTime: 6
   timerNodes:
   - timer: {fileID: 11400000, guid: 3b6f6c0d813c1594d8b1bf7616fcb1f9, type: 2}

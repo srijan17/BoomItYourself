@@ -20,16 +20,25 @@ MonoBehaviour:
   heroPrefabs:
   - {fileID: 732669788659935590, guid: 96cebd050b10dbe4f8ae63eca82fffea, type: 3}
   routeTimes:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  targetTime: 2
+  - time: 1
+    routeId: A-B
+  - time: 1
+    routeId: B-C
+  - time: 1
+    routeId: C-D
+  - time: 1
+    routeId: D-E
+  targetTime: 5
   timerNodes:
   - timer: {fileID: 11400000, guid: 3b6f6c0d813c1594d8b1bf7616fcb1f9, type: 2}
     timerName: Candle
     maxDuration: 2
+  - timer: {fileID: 11400000, guid: 3b6f6c0d813c1594d8b1bf7616fcb1f9, type: 2}
+    timerName: Candle
+    maxDuration: 2
+  - timer: {fileID: 11400000, guid: 3b6f6c0d813c1594d8b1bf7616fcb1f9, type: 2}
+    timerName: Candle
+    maxDuration: 1
   outputSignals:
   - outputPrefab: {fileID: 3088903001619148820, guid: 68938b39410fb1a47823047307483470, type: 3}
     outputType: 1

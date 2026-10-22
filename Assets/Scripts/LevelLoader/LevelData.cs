@@ -1,6 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
 [System.Serializable]
+public class RouteTime
+{
+    public float time;
+    public string routeId;
+}
+[System.Serializable]
 public class LevelTimerNode
 {
     public TimerNodeDefinition timer;
@@ -8,12 +14,7 @@ public class LevelTimerNode
     public float maxDuration;
 }
 
-[CreateAssetMenu(menuName = "BIY/Timer Node Definition")]
-public class TimerNodeDefinition : ScriptableObject
-{
-    public GameObject timerNode;
-    public string timerID;
-}
+
 
 [System.Serializable]
 public class LevelOutputSignal
@@ -32,7 +33,7 @@ public class LevelData : ScriptableObject
 
     public GameObject dungeonPrefab;
     public GameObject[] heroPrefabs;
-    public List<float> routeTimes; // List of times for each route in the level
+    public List<RouteTime> routeTimes; // List of times for each route in the level
     public float targetTime;
     public List<LevelTimerNode> timerNodes;
 
