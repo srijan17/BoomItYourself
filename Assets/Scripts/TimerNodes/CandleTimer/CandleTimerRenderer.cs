@@ -51,6 +51,7 @@ public class CandleRenderer : MonoBehaviour
         candleTimer.onStart.AddListener(OnTimerStart);
         candleTimer.onPause.AddListener(OnTimerPause);
         candleTimer.onComplete.AddListener(OnTimerComplete);
+        // candleTimer.onReset.AddListener(OnNewTimerStart);
         SetSpeed(candleTimer.maxDuration);
         CandleHolder.SetActive(true);
         CandleFlame.SetActive(false);
@@ -107,7 +108,7 @@ public class CandleRenderer : MonoBehaviour
     private void OnNewTimerStart()
     {
         CandleHolder.transform.localScale = Vector3.one * CandleMaxScale;
-
+        ResetCandle();
         // Handle the new timer start event
         Debug.Log("Candle Timer New Start");
         StopAllCoroutines();

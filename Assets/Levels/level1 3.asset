@@ -20,16 +20,26 @@ MonoBehaviour:
   heroPrefabs:
   - {fileID: 732669788659935590, guid: 96cebd050b10dbe4f8ae63eca82fffea, type: 3}
   routeTimes:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 1
-  - 1
+  - time: 1
+    routeId: A-B
+  - time: 1
+    routeId: B-C
+  - time: 1
+    routeId: C-D
+  - time: 1
+    routeId: E-F
+  - time: 1
+    routeId: 
+  - time: 0
+    routeId: 
+  - time: 0
+    routeId: 
+  - time: 0
+    routeId: 
+  - time: 0
+    routeId: 
+  - time: 0
+    routeId: 
   targetTime: 6
   timerNodes: []
   outputSignals:

@@ -4,7 +4,7 @@ public class DoorOpen : MonoBehaviour
 {
     [SerializeField] private Vector3 initialRotation;
     [SerializeField] private Vector3 finalRotation;
-    [SerializeField] private float animationTime = 0.1f;
+    [SerializeField] public float animationTime = 0.1f;
 
     public bool IsOpen { get; private set; }
 

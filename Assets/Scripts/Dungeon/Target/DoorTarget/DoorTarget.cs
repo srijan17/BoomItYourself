@@ -11,10 +11,9 @@ public class DoorTarget : ITarget
     public string routeId; // The route ID associated with this door
 
     public bool initialState = false; // The initial state of the door (open or closed)
-    public GameObject door; 
     public bool isDoorOpen = false; // Track the door's open/closed state
 
-    public DoorOpen doorOpen; // Reference to the DoorOpen script for animation
+    public DoorOpenBarrier doorOpen; // Reference to the DoorOpen script for animation
 
     private void Awake()
     {
