@@ -1,0 +1,81 @@
+{
+  "vertices_total": 984,
+  "triangles": 328,
+  "meshes": [
+    {
+      "name": "01_LowPoly_Ceramic_Body",
+      "tris": 216,
+      "materials": [
+        "Chalk_Ceramic",
+        "Chalk_Ceramic_Shadow",
+        "Cool_Slate",
+        "Countdown_Blank",
+        "Pewter_Edge"
+      ]
+    },
+    {
+      "name": "02_NodeType_Frame",
+      "tris": 28,
+      "materials": [
+        "Pewter_Edge"
+      ]
+    },
+    {
+      "name": "03_NodeType_Blank_Surface",
+      "tris": 28,
+      "materials": [
+        "Badge_Blank"
+      ]
+    },
+    {
+      "name": "04_Countdown_Frame",
+      "tris": 28,
+      "materials": [
+        "Pewter_Edge"
+      ]
+    },
+    {
+      "name": "05_Countdown_Blank_Surface",
+      "tris": 28,
+      "materials": [
+        "Countdown_Blank"
+      ]
+    }
+  ],
+  "materials": {
+    "Chalk_Ceramic": [
+      0.79,
+      0.85,
+      0.87
+    ],
+    "Chalk_Ceramic_Shadow": [
+      0.72,
+      0.79,
+      0.82
+    ],
+    "Cool_Slate": [
+      0.32,
+      0.41,
+      0.48
+    ],
+    "Pewter_Edge": [
+      0.56,
+      0.65,
+      0.7
+    ],
+    "Badge_Blank": [
+      0.24,
+      0.32,
+      0.39
+    ],
+    "Countdown_Blank": [
+      0.085,
+      0.12,
+      0.16
+    ]
+  },
+  "width_m": 0.8,
+  "height_m": 0.27,
+  "front": "-Z",
+  "file_bytes": 21904
+}

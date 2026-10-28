@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Route
   - Hero
+  - HighLight
   layers:
   - Default
   - TransparentFX

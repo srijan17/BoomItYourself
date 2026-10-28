@@ -1,0 +1,82 @@
+# Unity-compatible Wavefront MTL; import next to PNG files
+
+newmtl Wood_Walnut
+Ka 0.10 0.10 0.10
+Kd 1.000 1.000 1.000
+Ks 0.13 0.13 0.13
+Ns 25
+d 1
+illum 2
+map_Kd Wood_Walnut.png
+
+newmtl Wood_Light
+Ka 0.10 0.10 0.10
+Kd 1.000 1.000 1.000
+Ks 0.13 0.13 0.13
+Ns 25
+d 1
+illum 2
+map_Kd Wood_Light.png
+
+newmtl Wood_Top
+Ka 0.10 0.10 0.10
+Kd 1.000 1.000 1.000
+Ks 0.13 0.13 0.13
+Ns 25
+d 1
+illum 2
+map_Kd Wood_Top.png
+
+newmtl Brass_Worn
+Ka 0.10 0.10 0.10
+Kd 1.000 1.000 1.000
+Ks 0.13 0.13 0.13
+Ns 25
+d 1
+illum 2
+map_Kd Brass_Worn.png
+
+newmtl Brass_Bright
+Ka 0.10 0.10 0.10
+Kd 1.000 1.000 1.000
+Ks 0.13 0.13 0.13
+Ns 25
+d 1
+illum 2
+map_Kd Brass_Bright.png
+
+newmtl Slate_Badge
+Ka 0.10 0.10 0.10
+Kd 1.000 1.000 1.000
+Ks 0.13 0.13 0.13
+Ns 25
+d 1
+illum 2
+map_Kd Slate_Badge.png
+
+newmtl Dark_Iron
+Ka 0.10 0.10 0.10
+Kd 1.000 1.000 1.000
+Ks 0.13 0.13 0.13
+Ns 25
+d 1
+illum 2
+map_Kd Dark_Iron.png
+
+newmtl Countdown_Glass
+Ka 0.10 0.10 0.10
+Kd 1.000 1.000 1.000
+Ks 0.13 0.13 0.13
+Ns 25
+d 1
+illum 2
+map_Kd Countdown_Glass.png
+
+newmtl Dark_Shadow
+Ka 0.10 0.10 0.10
+Kd 1.000 1.000 1.000
+Ks 0.13 0.13 0.13
+Ns 25
+d 1
+illum 2
+map_Kd Dark_Shadow.png

@@ -15,6 +15,8 @@ public class DoorTarget : ITarget
 
     public DoorOpenBarrier doorOpen; // Reference to the DoorOpen script for animation
 
+    
+
     private void Awake()
     {
         // Initialize the target name or any other necessary properties

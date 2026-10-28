@@ -1,0 +1,41 @@
+newmtl Stone_Ivory
+Kd 0.776 0.773 0.736
+Ka 0.15 0.15 0.15
+Ks 0.08 0.08 0.08
+Ns 12
+
+newmtl Stone_Light
+Kd 0.848 0.833 0.787
+Ka 0.15 0.15 0.15
+Ks 0.08 0.08 0.08
+Ns 12
+
+newmtl Stone_Cool_Shadow
+Kd 0.651 0.646 0.62
+Ka 0.15 0.15 0.15
+Ks 0.08 0.08 0.08
+Ns 12
+
+newmtl Stone_Feet
+Kd 0.561 0.555 0.531
+Ka 0.15 0.15 0.15
+Ks 0.08 0.08 0.08
+Ns 12
+
+newmtl Bronze_Aged
+Kd 0.565 0.438 0.27
+Ka 0.15 0.15 0.15
+Ks 0.08 0.08 0.08
+Ns 12
+
+newmtl Slate_Badge
+Kd 0.207 0.203 0.196
+Ka 0.15 0.15 0.15
+Ks 0.08 0.08 0.08
+Ns 12
+
+newmtl Slate_Countdown
+Kd 0.095 0.104 0.114
+Ka 0.15 0.15 0.15
+Ks 0.08 0.08 0.08
+Ns 12

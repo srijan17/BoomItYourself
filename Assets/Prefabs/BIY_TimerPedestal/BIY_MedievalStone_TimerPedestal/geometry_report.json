@@ -1,0 +1,72 @@
+{
+  "triangles": 456,
+  "vertices_unwelded": 1368,
+  "meshes": [
+    {
+      "name": "Stone_CarvedBody_WithFeet",
+      "triangles": 260,
+      "materials": [
+        "Slate_Countdown",
+        "Stone_Cool_Shadow",
+        "Stone_Ivory",
+        "Stone_Light",
+        "Stone_Feet"
+      ]
+    },
+    {
+      "name": "Bronze_Socket_And_MetalTrims",
+      "triangles": 176,
+      "materials": [
+        "Bronze_Aged"
+      ]
+    },
+    {
+      "name": "CandleSocket_Interior",
+      "triangles": 8,
+      "materials": [
+        "Slate_Countdown"
+      ]
+    },
+    {
+      "name": "NodeType_Badge_Empty",
+      "triangles": 6,
+      "materials": [
+        "Slate_Badge"
+      ]
+    },
+    {
+      "name": "Countdown_Screen_Empty",
+      "triangles": 6,
+      "materials": [
+        "Slate_Countdown"
+      ]
+    }
+  ],
+  "bounds_m": {
+    "width": 0.7853,
+    "depth": 0.7956,
+    "height": 0.318
+  },
+  "units": "metres",
+  "up": "+Y",
+  "front": "-Z",
+  "binary_fbx_version": 7400,
+  "preview_requires_separate_candle": true,
+  "anchor_positions": {
+    "candle": [
+      0,
+      0.265,
+      0
+    ],
+    "badge": [
+      0,
+      0.188,
+      -0.37985339786363587
+    ],
+    "countdown": [
+      0,
+      0.095,
+      -0.40210998973419393
+    ]
+  }
+}

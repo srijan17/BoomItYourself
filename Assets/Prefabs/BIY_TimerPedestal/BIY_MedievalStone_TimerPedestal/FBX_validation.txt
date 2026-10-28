@@ -1,0 +1,3 @@
+PASS: Independently parsed generated FBX 7.4 binary; checked arrays, all triangle indices and normals, material count, attachment anchors, no degenerate faces.
+Validated: 456 triangles, 7 source materials, 5 mesh objects, 3 null anchors.
+Note: This is not a Unity Editor import test.

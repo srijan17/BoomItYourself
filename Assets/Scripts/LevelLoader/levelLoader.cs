@@ -67,12 +67,14 @@ public class LevelLoader : MonoBehaviour
                     endTimerInstance.transform.SetParent(endTimerRoot.transform);
 
                     EndTimer endTimerComponent = endTimerInstance.GetComponent<EndTimer>();
+                    HighLighter highLighterComponent = endTimerInstance.GetComponent<HighLighter>();
 
                     //Find relevant target for the end timer node
                     ITarget target = targets.Find(t => t.targetName == endTimerNodeData.targetName);
                     if(target != null)
                     {
                         endTimerComponent.Target=target;
+                        highLighterComponent.highLightable = endTimerComponent.GetComponent<HighLightable>();
                     endTimerComponent.eventType = endTimerNodeData.outputType;
                     }
             }

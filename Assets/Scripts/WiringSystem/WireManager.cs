@@ -136,6 +136,7 @@ public class WireManager : MonoBehaviour
         movingRoot != null;
 
     private HoverableObject lastHightlightedObject;
+    private HighLighter lastHighlightedHighLighter;
 
     //TODO: Move to wire connection probably
     [SerializeField] private Material permanentWireMats;
@@ -287,6 +288,10 @@ public class WireManager : MonoBehaviour
         WireNode hoverNode = GetNodeUnderMouse();
         HoverableObject hoverObject =
             GetHoverableObjectUnderMouse();
+
+        HighLighter highLighter = hoverNode != null ? hoverNode.GetComponent<HighLighter>() : null;
+
+      
         // if(hoverNode != null || hoverObject!=null )
         // {
         //     MovableWireObject movableObject = hoverNode.GetComponent<MovableWireObject>();
@@ -294,7 +299,16 @@ public class WireManager : MonoBehaviour
         // }
 
        
-        
+        if(lastHighlightedHighLighter != null && highLighter == null){
+            lastHighlightedHighLighter.Unhighlight();
+            lastHighlightedHighLighter = null;
+        }
+        else if(lastHighlightedHighLighter != null && highLighter != null  &&  
+        highLighter != lastHighlightedHighLighter){
+            lastHighlightedHighLighter.Unhighlight();
+            lastHighlightedHighLighter = null;
+        }
+
         if(lastHightlightedObject!=null && hoverObject==null){
             UnHighlightHoverableObject(lastHightlightedObject);
         }
@@ -307,8 +321,14 @@ public class WireManager : MonoBehaviour
         {
             HighlightHoverableObject(hoverObject);
             lastHightlightedObject = hoverObject;
-            
+           
         }
+
+         if(highLighter != null)
+            {
+            lastHighlightedHighLighter = highLighter;
+               highLighter.Highlight();
+            }
       
         
     }
@@ -953,6 +973,28 @@ public class WireManager : MonoBehaviour
         worldPosition = default;
         return false;
     }
+    private HighLighter GetHighlighterUnderMouse()
+    {
+        if (wiringCamera == null)
+            return null;
+
+        Ray ray =
+            wiringCamera.ScreenPointToRay(
+                PointerScreenPosition
+            );
+
+        if (!Physics.Raycast(
+                ray,
+                out RaycastHit hit,
+                Mathf.Infinity,
+                wireNodeLayerMask))
+        {
+            return null;
+        }
+
+        return hit.collider
+            .GetComponentInParent<HighLighter>();
+    }
 
     private WireNode GetNodeUnderMouse()
     {
@@ -999,7 +1041,7 @@ public class WireManager : MonoBehaviour
         return hit.collider
             .GetComponentInParent<MovableWireObject>();
     }
-
+    
     private HoverableObject GetHoverableObjectUnderMouse()
     {
         if (wiringCamera == null)

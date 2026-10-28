@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7940241892697275625}
   - component: {fileID: -2834005183808205401}
   - component: {fileID: 7984142036743786359}
+  - component: {fileID: -7389294040132156815}
   m_Layer: 7
   m_Name: EndTimer
   m_TagString: Untagged
@@ -92,6 +93,19 @@ MonoBehaviour:
       m_Calls: []
   eventType: 0
   target: {fileID: 0}
+--- !u!114 &-7389294040132156815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3088903001619148820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136e93fdf11608a4eb912043d2d8db26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HighLighter
+  highLightable: {fileID: 0}
 --- !u!1 &3991389748346214744
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +400,7 @@ MeshRenderer:
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
   m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 9671b826a171b044fad5bb643f452d9a, type: 2}
@@ -498,7 +512,7 @@ MeshRenderer:
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
   m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 47a2deb6f06819b47a54fba46e2a6e4e, type: 2}

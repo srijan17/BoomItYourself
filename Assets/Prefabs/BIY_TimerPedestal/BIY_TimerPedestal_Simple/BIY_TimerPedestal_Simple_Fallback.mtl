@@ -1,0 +1,43 @@
+# BIY timer pedestal material palette
+newmtl Chalk_Ceramic
+Ka 0.08 0.08 0.08
+Kd 0.79000 0.85000 0.87000
+Ks 0.05 0.05 0.05
+Ns 8.0
+illum 2
+
+newmtl Chalk_Ceramic_Shadow
+Ka 0.08 0.08 0.08
+Kd 0.72000 0.79000 0.82000
+Ks 0.05 0.05 0.05
+Ns 8.0
+illum 2
+
+newmtl Cool_Slate
+Ka 0.08 0.08 0.08
+Kd 0.32000 0.41000 0.48000
+Ks 0.05 0.05 0.05
+Ns 8.0
+illum 2
+
+newmtl Pewter_Edge
+Ka 0.08 0.08 0.08
+Kd 0.56000 0.65000 0.70000
+Ks 0.05 0.05 0.05
+Ns 8.0
+illum 2
+
+newmtl Badge_Blank
+Ka 0.08 0.08 0.08
+Kd 0.24000 0.32000 0.39000
+Ks 0.05 0.05 0.05
+Ns 8.0
+illum 2
+
+newmtl Countdown_Blank
+Ka 0.08 0.08 0.08
+Kd 0.08500 0.12000 0.16000
+Ks 0.05 0.05 0.05
+Ns 8.0
+illum 2
+
