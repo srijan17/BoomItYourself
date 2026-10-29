@@ -26,9 +26,14 @@ public class LevelLoader : MonoBehaviour
     // generate timer nodes based on the level data
     // reset handles that 
     
+    
 
     //TEMPORARY  WILL ADD END NODE INSTANTIATE AND GAME NODE ISNTANTE
-    public EndTimer endTimer;
+    // public EndTimer endTimer;
+
+    //Temp Map Loader 
+    public MapDrawer mapDrawer; // Reference to the MapDrawer for previewing the map
+    
     public void ResetAndLoadHero()
     {
         DungeonRoot dungeonRoot = levelParent.GetComponentInChildren<DungeonRoot>();
@@ -157,7 +162,7 @@ public class LevelLoader : MonoBehaviour
             GameObject bombInstance = Instantiate(bombPrefab, targetJunction.transform.position, Quaternion.identity);
             bombInstance.name = "Bomb";
             bombInstance.transform.SetParent(dungeonRoot.transform); // Set the bomb as a child of the dungeon root
-            endTimer.Target = bombInstance.GetComponent<BombTarget>();
+            // endTimer.Target = bombInstance.GetComponent<BombTarget>();
         }
         else{
             Debug.LogError($"Junction with name {JunctionName} not found in the dungeon.");
@@ -203,6 +208,32 @@ public class LevelLoader : MonoBehaviour
         InstantiateBomb(levelData.bombNode, dungeonRoot);
         InstantiateTimerNodes();
         InstantiateOutput();
+        if(mapDrawer != null){
+            //Get all starting Junctions from levelData.startingstartingNodes 
+            List<Junction> startingJunctions = new List<Junction>();
+            foreach (var startJunctionName in levelData.startingNodes)
+            {
+                Junction startJunction = dungeonRoot.GetJunctionByName(startJunctionName);
+                if (startJunction != null)
+                {
+                    startingJunctions.Add(startJunction);
+                }
+                else
+                {
+                    Debug.LogError($"Starting junction with name {startJunctionName} not found in the dungeon.");
+                }
+            }
+                    mapDrawer.ClearCanvas();
+                    if (startingJunctions.Count == 0)
+                    {
+                        Debug.LogError("No starting junctions found for the map.");
+                        return;
+                    }
+                    mapDrawer.CalibrateMap(startingJunctions);
+
+                    mapDrawer.DrawMap(startingJunctions);
+
+        }
         // dungeonRoot.Routes[0];
             
         // Load the route prefab

@@ -5,7 +5,10 @@ using System.Linq;
 public enum RouteType{
     Normal,
     Door,
-    Stairs
+    Stairs,
+    Start,
+    End
+
 }
 [System.Serializable]
 public class JunctionConnection{

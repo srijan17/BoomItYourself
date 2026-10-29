@@ -289,7 +289,9 @@ public class WireManager : MonoBehaviour
         HoverableObject hoverObject =
             GetHoverableObjectUnderMouse();
 
-        HighLighter highLighter = hoverNode != null ? hoverNode.GetComponent<HighLighter>() : null;
+        HighLighter highLighter = GetHighLighterActorNode();
+
+        // HighLighter highLighter = hoverNode != null ? hoverNode.GetComponent<HighLighter>() : null;
 
       
         // if(hoverNode != null || hoverObject!=null )
@@ -1040,6 +1042,36 @@ public class WireManager : MonoBehaviour
 
         return hit.collider
             .GetComponentInParent<MovableWireObject>();
+    }
+
+    private HighLighter GetHighLighterActorNode() {
+        if (wiringCamera == null)
+            return null;
+
+        Ray ray =
+            wiringCamera.ScreenPointToRay(
+                PointerScreenPosition
+            );
+
+        RaycastHit[] hits = Physics.RaycastAll(
+            ray,
+            Mathf.Infinity,
+            Physics.AllLayers,
+            QueryTriggerInteraction.Collide);
+
+        if (hits == null || hits.Length == 0)
+            return null;
+
+        System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+        foreach (var h in hits)
+        {
+            var highLighter = h.collider.GetComponentInParent<HighLighter>();
+            if (highLighter != null)
+                return highLighter;
+        }
+
+        return null;
     }
     
     private HoverableObject GetHoverableObjectUnderMouse()
