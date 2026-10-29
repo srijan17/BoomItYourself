@@ -1,11 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.Linq;
+using System;
+using System.Reflection;
 public struct MinMaxRoute{
     public Vector2 min;
     public Vector2 max;
 }
+
+//TODO : add capability for doors , pressureplate , portal
 public class MapDrawer : MonoBehaviour
 {
     //Offset for drawing the map elements
@@ -148,6 +153,47 @@ public class MapDrawer : MonoBehaviour
         rt.anchoredPosition3D = new Vector3(start.x, start.y, 0);
     }
 
+    private static float GetRouteTime(object route)
+    {
+        if (route == null)
+            return 0f;
+
+        string[] timeNames = { "routeTime", "travelTime", "time", "duration" };
+        Type type = route.GetType();
+        foreach (string name in timeNames)
+        {
+            FieldInfo field = type.GetField(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.IgnoreCase);
+            PropertyInfo property = type.GetProperty(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.IgnoreCase);
+            object value = field != null ? field.GetValue(route) : property != null && property.GetIndexParameters().Length == 0 ? property.GetValue(route, null) : null;
+            if (value != null)
+                return Convert.ToSingle(value);
+        }
+
+        return 0f;
+    }
+
+    private void DrawRouteTime(Vector2 from, Vector2 to, float routeTime)
+    {
+        GameObject labelObject = new GameObject("Route Time", typeof(RectTransform), typeof(CanvasRenderer), typeof(TextMeshProUGUI));
+        labelObject.transform.SetParent(transform, false);
+
+        TextMeshProUGUI label = labelObject.GetComponent<TextMeshProUGUI>();
+        label.font = TMP_Settings.defaultFontAsset;
+        label.text = routeTime.ToString("0.##");
+        label.alignment = TextAlignmentOptions.Center;
+        label.color = Color.black;
+        label.fontSize = 1.5f;
+        label.fontStyle = FontStyles.Bold;
+        
+        label.raycastTarget = false;
+
+        RectTransform rect = label.rectTransform;
+        rect.anchorMin = Vector2.zero;
+        rect.anchorMax = Vector2.zero;
+        rect.sizeDelta = new Vector2(48, 20);
+        rect.anchoredPosition = (from + to) * 0.5f + new Vector2(offsetX, offsetY);
+    }
+
     public void DrawMap(List<Junction> startJunctions){
         List<Junction> junctionPoints = new List<Junction>();
         DrawMap(startJunctions, new HashSet<Junction>(), junctionPoints);
@@ -171,6 +217,7 @@ public class MapDrawer : MonoBehaviour
                     continue;
 
                 Junction endJunction = next.nextJunction;
+                float accumulatedRouteTime = GetRouteTime(next);
                 var chain = new HashSet<Junction> { junction };
 
                 // Hide intermediate junctions only along an unbranched route
@@ -184,6 +231,7 @@ public class MapDrawer : MonoBehaviour
                         chain.Contains(outgoing[0].nextJunction))
                         break;
 
+                    accumulatedRouteTime += GetRouteTime(outgoing[0]);
                     visited.Add(endJunction);
                     endJunction = outgoing[0].nextJunction;
                 }
@@ -193,6 +241,10 @@ public class MapDrawer : MonoBehaviour
                     NormalizePosition(junction.transform.position),
                     NormalizePosition(endJunction.transform.position),
                     color);
+                DrawRouteTime(
+                    NormalizePosition(junction.transform.position),
+                    NormalizePosition(endJunction.transform.position),
+                    accumulatedRouteTime);
 
                 DrawMap(new List<Junction> { endJunction }, visited, junctionPoints);
             }
