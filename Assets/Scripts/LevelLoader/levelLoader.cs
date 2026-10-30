@@ -231,7 +231,18 @@ public class LevelLoader : MonoBehaviour
                     }
                     mapDrawer.CalibrateMap(startingJunctions);
 
-                    mapDrawer.DrawMap(startingJunctions, dungeonRoot.GetTargets());
+                    BombTarget[] existingBombs = dungeonRoot.gameObject.GetComponentsInChildren<BombTarget>();
+                    List<ITarget> existingTargets = new List<ITarget>();
+                    foreach (var bomb in existingBombs)
+                    {
+                        existingTargets.Add(bomb);
+                    }
+                    foreach (var target in dungeonRoot.GetTargets())
+                    {
+                        existingTargets.Add(target);
+                    }
+                    mapDrawer.DrawMap(startingJunctions, existingTargets);
+                    
 
         }
         // dungeonRoot.Routes[0];

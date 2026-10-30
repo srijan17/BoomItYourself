@@ -41,7 +41,19 @@ MonoBehaviour:
   - time: 0
     routeId: 
   targetTime: 6
-  timerNodes: []
+  timerNodes:
+  - timer: {fileID: 11400000, guid: a194cd5428f74bf41a5ff30d1fd65fba, type: 2}
+    timerName: Gate1
+    maxDuration: 1
+  - timer: {fileID: 11400000, guid: e574744a11e42d84b824ee9fb0d54d33, type: 2}
+    timerName: pause
+    maxDuration: 2
+  - timer: {fileID: 11400000, guid: 7dd35d5ae00fff04d9f930e2a64d865d, type: 2}
+    timerName: cooker
+    maxDuration: 3
+  - timer: {fileID: 11400000, guid: 7dd35d5ae00fff04d9f930e2a64d865d, type: 2}
+    timerName: cooker1
+    maxDuration: 2
   outputSignals:
   - outputPrefab: {fileID: 3088903001619148820, guid: 68938b39410fb1a47823047307483470, type: 3}
     outputType: 1

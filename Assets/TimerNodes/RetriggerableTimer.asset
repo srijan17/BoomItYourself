@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 7450549529914254e970e3c0615b70e0, type: 3}
   m_Name: RetriggerableTimer
   m_EditorClassIdentifier: Assembly-CSharp::TimerNodeDefinition
   timerNode: {fileID: 3088903001619148820, guid: 2191dfa4927989f40832f7c3460c6787, type: 3}
-  timerID: ReTriggerableTimer
+  timerID: RiceCookerTimer
