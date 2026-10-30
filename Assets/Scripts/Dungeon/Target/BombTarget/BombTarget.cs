@@ -13,6 +13,7 @@ public class BombTarget : ITarget
     public float explosionRadius; // The radius within which the explosion affects the hero
     private void Awake()
     {
+        targetType = TargetType.Bomb;
         // Initialize the target name or any other necessary properties
         targetName = "BombTarget"; // Example target name
         SimulationManager.Instance.onNewEvent.AddListener(NewEvent);

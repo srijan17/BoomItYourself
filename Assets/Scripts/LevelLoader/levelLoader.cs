@@ -108,7 +108,7 @@ public class LevelLoader : MonoBehaviour
                     GameObject timerNodeInstance = Instantiate(timerNodeData.timer.timerNode, spawnPoint.position, Quaternion.identity);
                     timerNodeInstance.name = timerNodeData.timerName;
                     ITimerNode timerNodeComponent = timerNodeInstance.GetComponent<ITimerNode>();
-                    timerNodeComponent.maxDuration=timerNodeData.maxDuration;
+                    timerNodeComponent.UpdateMaxDuration(timerNodeData.maxDuration);
                     timerNodeInstance.transform.SetParent(timerRoot.transform);
                 }
             }
@@ -231,7 +231,7 @@ public class LevelLoader : MonoBehaviour
                     }
                     mapDrawer.CalibrateMap(startingJunctions);
 
-                    mapDrawer.DrawMap(startingJunctions);
+                    mapDrawer.DrawMap(startingJunctions, dungeonRoot.GetTargets());
 
         }
         // dungeonRoot.Routes[0];

@@ -20,10 +20,12 @@ public abstract class ITimerNode : MonoBehaviour
     public abstract void Reset();
     public TimerState timerState;
     public UnityEvent onNew = new UnityEvent();
+    public UnityEvent onReset = new UnityEvent();
     public UnityEvent onStart = new UnityEvent();
     public UnityEvent onComplete = new UnityEvent();
     public UnityEvent onPause = new UnityEvent();
 
     public abstract void StartTimer();
     public abstract void PauseTimer();
+    public abstract void UpdateMaxDuration(float maxDuration);
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   startingNodes:
   - A
-  bombNode: F
+  bombNode: G
   levelName: level2
   dungeonPrefab: {fileID: 2265116289173723955, guid: a44da0462f3c15047bed58d903f86303, type: 3}
   heroPrefabs:

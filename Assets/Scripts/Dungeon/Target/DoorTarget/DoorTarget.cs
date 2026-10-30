@@ -19,6 +19,7 @@ public class DoorTarget : ITarget
 
     private void Awake()
     {
+        targetType = TargetType.Door;
         // Initialize the target name or any other necessary properties
         SimulationManager.Instance.onNewEvent.AddListener(NewEvent);
 

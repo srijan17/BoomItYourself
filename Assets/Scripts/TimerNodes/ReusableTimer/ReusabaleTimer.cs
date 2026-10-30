@@ -32,6 +32,11 @@ public class ReusableTimer : ITimerNode
         onNew.Invoke();
     }
 
+    public override void UpdateMaxDuration(float maxDuration)
+    {
+        this.maxDuration = maxDuration;
+        Reset();
+    }
 
     public override void PauseTimer()
     {

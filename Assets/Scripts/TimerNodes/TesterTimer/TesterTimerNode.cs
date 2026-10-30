@@ -77,6 +77,12 @@ public class TesterTimer : ITimerNode
         resetCoroutine = null;
     }
 
+
+    public override void UpdateMaxDuration(float maxDuration)
+    {
+        this.maxDuration = maxDuration;
+        Reset();
+    }
     public override void Reset()
     {
         StopAllCoroutines();

@@ -24,6 +24,12 @@ public class EndTimer : ITimerNode
        
     }
 
+
+    public override void UpdateMaxDuration(float maxDuration)
+    {
+        this.maxDuration = maxDuration;
+        Reset();
+    }
     public override void Reset()
     {
         StopAllCoroutines();

@@ -13,6 +13,9 @@ public class DungeonRoot : MonoBehaviour
         _Targets = new List<ITarget>(GetComponentsInChildren<ITarget>());
     }
 
+    public List<ITarget> GetTargets(){
+        return _Targets;
+    }
 
     public Junction GetJunctionByName(string junctionName){
         return _Routes.Find(j => j.name == junctionName);

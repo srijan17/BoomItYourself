@@ -24,6 +24,12 @@ public class PausableTimer : ITimerNode
         StartCoroutine(TimerCoroutine());
     }
 
+  
+    public override void UpdateMaxDuration(float maxDuration)
+    {
+        this.maxDuration = maxDuration;
+        Reset();
+    }
     public override void Reset()
     {
         StopAllCoroutines();

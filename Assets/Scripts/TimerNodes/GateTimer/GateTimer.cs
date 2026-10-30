@@ -32,6 +32,12 @@ public class GateTimer : ITimerNode
     }
     }
 
+   
+    public override void UpdateMaxDuration(float maxDuration)
+    {
+        this.maxDuration = maxDuration;
+        Reset();
+    }
        public override void Reset()
     {
         isGateSwitching= false;

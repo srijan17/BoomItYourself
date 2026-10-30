@@ -8,6 +8,7 @@ public class HeroTarget : ITarget
 
     private void Start()
     {
+        targetType = TargetType.Hero;
         heroRunner = GetComponent<HeroRunner2>(); // Get the HeroRunner component attached to the same GameObject
         if (heroRunner == null)
         {

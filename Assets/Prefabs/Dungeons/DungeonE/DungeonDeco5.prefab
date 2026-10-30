@@ -5747,6 +5747,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[0].routeType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].JunctionName
       value: CD
       objectReference: {fileID: 0}
@@ -7260,6 +7264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorTarget
   targetName: Door1
+  targetType: 0
   sourceJunction: {fileID: 3070859625916043007}
   targetJunction: {fileID: 1963193305202057162}
   routeId: 
@@ -8743,6 +8748,10 @@ PrefabInstance:
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].isActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
+      propertyPath: nextJunctions.Array.data[0].routeType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4103427255408411477, guid: b735ebcd4da354a4ab644bf4f7e96323, type: 3}
       propertyPath: nextJunctions.Array.data[0].JunctionName

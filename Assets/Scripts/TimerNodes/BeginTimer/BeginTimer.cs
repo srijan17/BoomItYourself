@@ -16,6 +16,13 @@ public class BeginTimer : ITimerNode
     {
     }
 
+
+    public override void UpdateMaxDuration(float maxDuration)
+    {
+        this.maxDuration = maxDuration;
+        Reset();
+    }
+
     public void completed()
     {
        

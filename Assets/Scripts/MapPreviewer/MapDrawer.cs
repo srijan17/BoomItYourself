@@ -27,6 +27,50 @@ public class MapDrawer : MonoBehaviour
     
     public Image mapPointPrefab;
     public Image routePrefab;
+
+    [Serializable]
+    public struct TargetSprite
+    {
+        // Match the targetType name (including enum names).
+        public string targetType;
+        public Sprite sprite;
+    }
+
+    public List<TargetSprite> targetSprites = new List<TargetSprite>();
+    public Vector2 targetIconSize = new Vector2(4, 4);
+
+    public void DrawTarget(ITarget target)
+    {
+
+        Sprite sprite = null;
+        
+        targetSprites.ForEach(entry =>
+        {
+            if (string.Equals(entry.targetType, target.targetType.ToString(), StringComparison.OrdinalIgnoreCase))
+            {
+                sprite = entry.sprite;
+            }
+        });
+        if (sprite == null)
+            return;
+
+        GameObject iconObject = new GameObject("Target: " + target.targetName, typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+        iconObject.transform.SetParent(transform, false);
+        Image icon = iconObject.GetComponent<Image>();
+        icon.sprite = sprite;
+        icon.preserveAspect = true;
+        icon.raycastTarget = false;
+
+        Vector2 position = NormalizePosition(target.transform.position);
+        RectTransform rect = icon.rectTransform;
+        rect.anchorMin = Vector2.zero;
+        rect.anchorMax = Vector2.zero;
+        rect.anchoredPosition = new Vector2(
+            Mathf.Clamp(position.x + offsetX, 0, maxWidth),
+            Mathf.Clamp(position.y+0.5f + offsetY, 0, maxHeight));
+        rect.sizeDelta = targetIconSize;
+    }
+
     //Draw mapPoint on map 
     public void DrawMapPoint(Vector2 position)
     {
@@ -44,7 +88,8 @@ public class MapDrawer : MonoBehaviour
       );
  
       //Set Image height widht as 10 10 
-      mapPoint.rectTransform.sizeDelta = new Vector2(1, 1);
+      mapPoint.rectTransform.sizeDelta = targetIconSize;
+
     }
 
     public void DrawJunction(Junction junction)
@@ -194,13 +239,24 @@ public class MapDrawer : MonoBehaviour
         rect.anchoredPosition = (from + to) * 0.5f + new Vector2(offsetX, offsetY);
     }
 
-    public void DrawMap(List<Junction> startJunctions){
+    public void DrawMap(List<Junction> startJunctions , List<ITarget> targets){
+        DrawMap(startJunctions, (IEnumerable<ITarget>)targets);
+    }
+
+    public void DrawMap(List<Junction> startJunctions, IEnumerable<ITarget> targets){
         List<Junction> junctionPoints = new List<Junction>();
         DrawMap(startJunctions, new HashSet<Junction>(), junctionPoints);
 
         // Draw points after all routes so they appear on top of the lines.
         foreach (Junction junction in junctionPoints)
             DrawJunction(junction);
+
+        // Draw target icons last so they remain visible above routes and points.
+        if (targets != null)
+        {
+            foreach (ITarget target in targets)
+                DrawTarget(target);
+        }
     }
 
     private void DrawMap(List<Junction> junctions, HashSet<Junction> visited, List<Junction> junctionPoints){
